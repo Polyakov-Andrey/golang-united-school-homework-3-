@@ -6,9 +6,14 @@ import (
 
 const MESSAGE = "got %f, wanted %f"
 
-func TestCalcSquareSidesTriangle(t *testing.T) {
+func TestAverage(t *testing.T) {
 
-	array := []float32{1, 2, 3, 4, 5, 6.0}
+	array := [15]float32{1, 2, 3, 4, 5, 6.0}
+
+	// array1 := new([15]float32)[0:15]
+	// println(reflect.TypeOf(array1))
+	// copy(array1, array[])
+	// println(len(array))
 	got_ave := average(array)
 	want_ave := float32(21.0 / 6)
 

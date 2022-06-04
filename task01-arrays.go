@@ -1,11 +1,15 @@
 package homework
 
-func average(input []float32) (result float32) {
+func average(input [15]float32) (result float32) {
 	var sum float32 = 0
+	var count int = 0
 	for i, el := range input {
-		sum += el
-		println(i, el)
+		if el != 0 {
+			count++
+			sum += el
+			println(i, el)
+		}
 	}
-	println(sum, " ", len(input))
-	return sum / float32(len(input))
+	// println(sum, " ", count)
+	return sum / float32(count)
 }
